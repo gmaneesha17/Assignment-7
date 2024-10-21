@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title About Us
+    link(rel="stylesheet" href=".assets/css/about.css")
+  body
+    header
+      | About Us
+      nav
+        ul
+          li: a(href="./home.html") Browse
+          li: a(href="./playlist.html") Playlists
+          li: a(href="./register.html") Register
+          li: a(href="./index.html") Home
+          li: a(href="./dashboard.html") Dashboard
+
+    .container
+      h1 Welcome to Our Music World!
+      p#intro-text We are passionate about bringing the best music experience to our users. 
+                  Our team is dedicated to curating playlists, discovering new artists, and 
+                  creating a vibrant community for music lovers.
+
+      h2 Meet the Team
+      #team-section
+
+      .theme-toggle#themeToggleBtn Switch to Dark Theme
+
+    script(src="assets/js/about.js")

@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Website Dashboard
+    link(rel="stylesheet", href="assets/css/dashboard.css")
+  body
+    header
+      | Music Website Dashboard
+      nav
+        ul
+          li: a(href="./browse.html") Browse
+          li: a(href="./playlist.html") Playlists
+          li: a(href="./register.html") Register
+          li: a(href="./about.html") About Us
+          li: a(href="./index.html") Home
+
+    .container
+      h2 User Information
+      .controls
+        button#add-user Add User
+        input#filter-name(type="text", placeholder="Filter by name")
+        button#save-button.save-button(style="display:none;") Save
+
+      table#user-table
+        thead
+          tr
+            th Name
+            th Email
+            th Favorite Artist
+            th Number of Playlists
+        tbody
+          //- Data will be populated by JavaScript
+
+      #message.message
+
+    script(src="assets/js/dashboard.js")

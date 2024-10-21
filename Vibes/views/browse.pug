@@ -1,0 +1,67 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Music Streaming
+    link(rel="stylesheet" href="assests/css/browse.css")
+
+  header.login-header
+    .logo
+      h1
+        a(href="#") Welcome to Vibess
+
+  body
+    // Login Section
+    #login-page.login-container
+      .form-box
+        h1.form-title Music Login Form
+        form#login-form
+          .input-group
+            label(for="username")
+              i.fas.fa-user
+              | Username
+            input(type="text" id="username" placeholder="Username" required)
+          .input-group
+            label(for="password")
+              i.fas.fa-lock
+              | Password
+            input(type="password" id="password" placeholder="Password" required)
+          .form-options
+            label.remember-me
+              input(type="checkbox") Remember Me
+            a.forgot-password(href="#") Forgot Password
+          button.btn(type="submit") Log In
+
+    // Main Content (Initially Hidden)
+    #main-content.hidden
+      header.header
+        h1 Browse
+        nav
+          ul
+            li
+              a(href="./index.html") Home
+            li
+              a(href="./playlist.html") Playlists
+            li
+              a(href="./register.html") Register
+            li
+              a(href="./about.html") About Us
+            li
+              a(href="./dashboard.html") Dashboard
+
+      section.search-section
+        input#search(type="text" placeholder="Search for songs or artists...")
+        button(onclick="searchSongs()") Search
+
+      section.song-list#song-list
+        // Song items will be injected here
+
+      footer
+        p © 2024 Vibess. All rights reserved.
+
+    // Footer for the login page
+    footer
+      p © 2024 Vibess. All rights reserved.
+
+    script(src="assests/js/browse.js")

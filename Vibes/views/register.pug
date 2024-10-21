@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Registration Page
+    link(rel="stylesheet", href="assets/css/register.css")
+  body
+    header
+      | Website Registration
+      nav
+        ul
+          li: a(href="./home.html") Browse
+          li: a(href="./playlist.html") Playlists
+          li: a(href="./register.html") Register
+          li: a(href="./about.html") About Us
+          li: a(href="./dashboard.html") Dashboard
+    .container
+      form#registration-form
+        fieldset
+          legend Register
+          label(for="name") Name:
+          input(type="text", id="name", name="name", required)
+          label(for="email") Email:
+          input(type="email", id="email", name="email", required)
+          label(for="password") Password:
+          input(type="password", id="password", name="password", required)
+          label(for="confirm-password") Confirm Password:
+          input(type="password", id="confirm-password", name="confirm-password", required)
+          input(type="submit", value="Submit")
+          input(type="reset", value="Reset")
+      #message.message
+    script(src="assets/js/register.js")
